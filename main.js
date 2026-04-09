@@ -173,16 +173,24 @@
     });
   }
 
-  function normalizePath(p) {
-    if (!p) return "/";
+  /** GitHub Pages: progetto servito sotto /NomeRepo/ */
+  var SITE_BASE = "/LagioiaCostruzioni";
+
+  function comparablePath(p) {
+    if (!p) return SITE_BASE;
     p = p.replace(/\/$/, "");
-    if (p === "") return "/";
-    if (p === "/index.html") return "/";
+    if (p === "") p = "/";
+    if (p === "/" || p === "/index.html") return SITE_BASE;
+    if (p === SITE_BASE || p === SITE_BASE + "/index.html") return SITE_BASE;
+    if (p.indexOf(SITE_BASE + "/") === 0) return p;
+    if (p.charAt(0) === "/" && p.indexOf(SITE_BASE) !== 0) {
+      return SITE_BASE + p;
+    }
     return p;
   }
 
   function initNavActive() {
-    var path = normalizePath(window.location.pathname);
+    var path = comparablePath(window.location.pathname);
     document.querySelectorAll("[data-nav-root] .nav-link").forEach(function (link) {
       link.removeAttribute("aria-current");
     });
@@ -190,8 +198,8 @@
       var href = link.getAttribute("href");
       if (!href || href.indexOf("#") === 0) return;
       try {
-        var u = new URL(href, window.location.origin);
-        var p = normalizePath(u.pathname);
+        var u = new URL(href, window.location.href);
+        var p = comparablePath(u.pathname);
         if (p === path) {
           link.setAttribute("aria-current", "page");
         }
