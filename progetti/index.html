@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progetti — Edil Costruzioni Lagioia | Portfolio Lavori</title>
+    <meta
+      name="description"
+      content="Selezione di cantieri e progetti: costruzioni, ristrutturazioni e opere pubbliche in Calabria. Residenze, edifici commerciali e infrastrutture."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.edilcostruzionilagioiaalessandro.it/progetti/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Progetti — Edil Costruzioni Lagioia" />
+    <meta property="og:url" content="https://www.edilcostruzionilagioiaalessandro.it/progetti/" />
+    <meta property="og:locale" content="it_IT" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="sr-only skip-link">Salta al contenuto</a>
+
+    <header class="site-header" role="banner">
+      <div class="nav-inner" data-nav-root>
+        <a href="/" class="logo-link" aria-label="Edil Costruzioni Lagioia — Home">
+          <svg class="logo-svg" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+            <defs>
+              <clipPath id="logo-clip-pr">
+                <polygon points="0,0 32,0 48,16 48,48 0,48" />
+              </clipPath>
+            </defs>
+            <g clip-path="url(#logo-clip-pr)">
+              <rect width="48" height="48" fill="#c0220f" />
+              <rect x="28" y="0" width="8" height="8" fill="#c48a00" />
+            </g>
+            <text x="14" y="34" font-family="'Bebas Neue', sans-serif" font-size="22" fill="#ffffff">ECL</text>
+          </svg>
+          <span class="logo-text">
+            <span>Edil Costruzioni</span>
+            <span>Lagioia</span>
+          </span>
+        </a>
+
+        <nav class="nav-desktop" role="navigation" aria-label="Menu principale">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/chi-siamo/" class="nav-link">Chi Siamo</a>
+          <a href="/servizi/" class="nav-link">Servizi</a>
+          <a href="/progetti/" class="nav-link" aria-current="page">Progetti</a>
+          <a href="/contatti/" class="nav-link">Contatti</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="/contatti/" class="btn btn--primary">Richiedi Preventivo</a>
+          <button type="button" class="btn btn--icon" data-theme-toggle aria-pressed="false" aria-label="Attiva tema scuro">
+            <i data-lucide="moon" width="20" height="20" data-icon-moon aria-hidden="true"></i>
+            <i data-lucide="sun" width="20" height="20" data-icon-sun aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <button type="button" class="burger-toggle" data-burger-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Apri menu">
+          <i data-lucide="menu" width="24" height="24" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu" data-mobile-menu role="dialog" aria-modal="true" aria-label="Menu di navigazione" aria-hidden="true">
+      <div class="mobile-menu__top">
+        <button type="button" class="mobile-menu__close" data-mobile-close aria-label="Chiudi menu">
+          <i data-lucide="x" width="28" height="28" aria-hidden="true"></i>
+        </button>
+      </div>
+      <nav class="mobile-menu__nav" aria-label="Sezioni">
+        <a href="/">Home</a>
+        <a href="/chi-siamo/">Chi Siamo</a>
+        <a href="/servizi/">Servizi</a>
+        <a href="/progetti/">Progetti</a>
+        <a href="/contatti/">Contatti</a>
+      </nav>
+      <div class="mobile-menu__bottom">
+        <a href="tel:+393472209465"><i data-lucide="phone" width="20" height="20" aria-hidden="true"></i> +39 347 220 9465</a>
+        <a
+          class="btn btn--whatsapp"
+          href="https://wa.me/393472209465?text=Buongiorno%2C%20vi%20contatto%20dal%20sito%20web.%20Vorrei%20richiedere%20un%20preventivo%20per%20i%20seguenti%20lavori%3A%20"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i data-lucide="message-circle" width="22" height="22" aria-hidden="true"></i>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <header class="page-hero container">
+        <span class="section-label reveal">I nostri lavori</span>
+        <h1 class="reveal-up">Ogni progetto racconta una storia</h1>
+        <p class="text-muted reveal">
+          Da piccoli interventi di ristrutturazione a grandi opere civili per enti pubblici. Ecco alcuni dei lavori che ci rendono orgogliosi.
+        </p>
+      </header>
+
+      <section class="section container" data-project-filters aria-labelledby="filtri-progetti">
+        <h2 id="filtri-progetti" class="sr-only">Filtra i progetti</h2>
+        <div class="filter-tabs reveal" role="tablist" aria-label="Categoria progetto">
+          <button type="button" class="filter-tab is-active" data-filter-tab data-filter="all" role="tab" aria-selected="true">Tutti</button>
+          <button type="button" class="filter-tab" data-filter-tab data-filter="costruzioni" role="tab" aria-selected="false">Costruzioni</button>
+          <button type="button" class="filter-tab" data-filter-tab data-filter="ristrutturazioni" role="tab" aria-selected="false">Ristrutturazioni</button>
+          <button type="button" class="filter-tab" data-filter-tab data-filter="opere-pubbliche" role="tab" aria-selected="false">Opere pubbliche</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal" data-project-card data-category="costruzioni">
+            <img
+              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80"
+              alt="Esterno residenza moderna con giardino"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Residenza privata</h3>
+              <div class="project-card__meta">
+                <span>Praia a Mare (CS)</span>
+                <i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i>
+              </div>
+              <p class="text-muted" style="margin: var(--space-2) 0 0; font-size: var(--text-xs); color: rgba(232,229,224,0.9)">
+                Costruzioni · Nuova costruzione, Chiavi in mano, 2022
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-project-card data-category="ristrutturazioni">
+            <img
+              src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800&q=80"
+              alt="Esterno villa con piscina dopo ristrutturazione"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Ristrutturazione villa</h3>
+              <div class="project-card__meta">
+                <span>Scalea (CS)</span>
+                <i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i>
+              </div>
+              <p class="text-muted" style="margin: var(--space-2) 0 0; font-size: var(--text-xs); color: rgba(232,229,224,0.9)">
+                Ristrutturazioni · Totale, Cappotto termico, 2023
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-project-card data-category="costruzioni">
+            <img
+              src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80"
+              alt="Edificio per uffici in vetro e acciaio"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Edificio commerciale</h3>
+              <div class="project-card__meta">
+                <span>Cosenza</span>
+                <i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i>
+              </div>
+              <p class="text-muted" style="margin: var(--space-2) 0 0; font-size: var(--text-xs); color: rgba(232,229,224,0.9)">
+                Costruzioni · Commerciale, Struttura in c.a., 2021
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-project-card data-category="opere-pubbliche">
+            <img
+              src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&q=80"
+              alt="Area parcheggio urbano con segnaletica orizzontale"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Parcheggio pubblico</h3>
+              <div class="project-card__meta">
+                <span>Tortora (CS)</span>
+                <i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i>
+              </div>
+              <p class="text-muted" style="margin: var(--space-2) 0 0; font-size: var(--text-xs); color: rgba(232,229,224,0.9)">
+                Opere pubbliche · Appalto, Pavimentazione, 2020
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-project-card data-category="ristrutturazioni">
+            <img
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
+              alt="Cucina moderna con isola dopo ristrutturazione"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Ristrutturazione appartamento</h3>
+              <div class="project-card__meta">
+                <span>Diamante (CS)</span>
+                <i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i>
+              </div>
+              <p class="text-muted" style="margin: var(--space-2) 0 0; font-size: var(--text-xs); color: rgba(232,229,224,0.9)">
+                Ristrutturazioni · Interior, Bagno e cucina, 2023
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-project-card data-category="opere-pubbliche">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+              alt="Strada asfaltata in zona collinare"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Rifacimento strada comunale</h3>
+              <div class="project-card__meta">
+                <span>Papasidero (CS)</span>
+                <i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i>
+              </div>
+              <p class="text-muted" style="margin: var(--space-2) 0 0; font-size: var(--text-xs); color: rgba(232,229,224,0.9)">
+                Opere pubbliche · Manto stradale, Fognatura, 2022
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="/" class="logo-link" style="margin-bottom: var(--space-4)">
+              <svg class="logo-svg" width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
+                <defs>
+                  <clipPath id="logo-clip-foot-pr">
+                    <polygon points="0,0 32,0 48,16 48,48 0,48" />
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#logo-clip-foot-pr)">
+                  <rect width="48" height="48" fill="#c0220f" />
+                  <rect x="28" y="0" width="8" height="8" fill="#c48a00" />
+                </g>
+                <text x="14" y="34" font-family="'Bebas Neue', sans-serif" font-size="22" fill="#ffffff">ECL</text>
+              </svg>
+              <span class="logo-text">
+                <span>Edil Costruzioni</span>
+                <span>Lagioia</span>
+              </span>
+            </a>
+            <p class="footer-tagline">Costruiamo dal 1988 con passione e competenza.</p>
+          </div>
+          <div class="footer-col">
+            <h3>Navigazione</h3>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/chi-siamo/">Chi Siamo</a></li>
+              <li><a href="/servizi/">Servizi</a></li>
+              <li><a href="/progetti/">Progetti</a></li>
+              <li><a href="/contatti/">Contatti</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Servizi principali</h3>
+            <ul>
+              <li><a href="/servizi/">Nuove costruzioni</a></li>
+              <li><a href="/servizi/">Ristrutturazioni</a></li>
+              <li><a href="/servizi/">Movimento terra</a></li>
+              <li><a href="/servizi/">Lavori stradali</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contatti</h3>
+            <ul>
+              <li>Via della Canaletta, 22C — 87028 Praia a Mare (CS)</li>
+              <li><a href="tel:+393472209465">+39 347 220 9465</a></li>
+              <li><a href="mailto:edilcostruzioni.srl1@tiscali.it">edilcostruzioni.srl1@tiscali.it</a></li>
+            </ul>
+            <a href="https://www.facebook.com/costruzionilagioiasrl/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Edil Costruzioni Lagioia Alessandro S.r.l. — P.IVA 02895410781</p>
+          <div class="footer-legal">
+            <button type="button" class="btn btn--ghost" data-modal-open="modal-privacy" style="border: none; padding: 0; min-height: 44px">Privacy Policy</button>
+            <button type="button" class="btn btn--ghost" data-modal-open="modal-cookie" style="border: none; padding: 0; min-height: 44px">Cookie Policy</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="modal-privacy" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-hidden="true">
+      <div class="modal__dialog" role="document">
+        <button type="button" class="modal__close" data-modal-close aria-label="Chiudi"><i data-lucide="x" width="22" height="22"></i></button>
+        <h2 id="privacy-title">Privacy Policy</h2>
+        <p>
+          La presente informativa descrive le modalità di trattamento dei dati personali raccolti tramite il sito web di Edil Costruzioni Lagioia Alessandro S.r.l., in conformità al Regolamento (UE) 2016/679 (GDPR).
+        </p>
+        <h3>Titolare del trattamento</h3>
+        <p>Edil Costruzioni Lagioia Alessandro S.r.l., Via della Canaletta, 22C — 87028 Praia a Mare (CS), P.IVA 02895410781.</p>
+      </div>
+    </div>
+
+    <div id="modal-cookie" class="modal" role="dialog" aria-modal="true" aria-labelledby="cookie-title" aria-hidden="true">
+      <div class="modal__dialog" role="document">
+        <button type="button" class="modal__close" data-modal-close aria-label="Chiudi"><i data-lucide="x" width="22" height="22"></i></button>
+        <h2 id="cookie-title">Cookie Policy</h2>
+        <p>Utilizziamo solo cookie tecnici necessari. Nessuna profilazione, nessun analytics di terze parti.</p>
+      </div>
+    </div>
+
+    <div class="cookie-banner" data-cookie-banner role="region" aria-label="Informazioni sui cookie">
+      <p style="margin: 0; font-size: var(--text-sm)">
+        Questo sito utilizza esclusivamente cookie tecnici necessari al funzionamento. Non tracciamo i tuoi dati.
+        <button type="button" class="btn btn--ghost" data-modal-open="modal-cookie" style="display: inline; padding: 0; min-height: auto; border: none; color: var(--color-gold)">Leggi la Cookie Policy</button>
+      </p>
+      <div class="cookie-banner__actions">
+        <button type="button" class="btn btn--primary" data-cookie-accept>Accetta</button>
+        <button type="button" class="btn btn--ghost" data-cookie-dismiss style="border-color: rgba(248,247,245,0.35); color: inherit">Chiudi</button>
+      </div>
+    </div>
+
+    <a
+      class="float-wa"
+      href="https://wa.me/393472209465?text=Buongiorno%2C%20vi%20contatto%20dal%20sito%20web.%20Vorrei%20richiedere%20un%20preventivo%20per%20i%20seguenti%20lavori%3A%20"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Scrivici su WhatsApp"
+    >
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>
