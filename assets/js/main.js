@@ -173,8 +173,16 @@
     });
   }
 
+  function normalizePath(p) {
+    if (!p) return "/";
+    p = p.replace(/\/$/, "");
+    if (p === "") return "/";
+    if (p === "/index.html") return "/";
+    return p;
+  }
+
   function initNavActive() {
-    var path = window.location.pathname.replace(/\/$/, "") || "/";
+    var path = normalizePath(window.location.pathname);
     document.querySelectorAll("[data-nav-root] .nav-link").forEach(function (link) {
       link.removeAttribute("aria-current");
     });
@@ -183,7 +191,7 @@
       if (!href || href.indexOf("#") === 0) return;
       try {
         var u = new URL(href, window.location.origin);
-        var p = u.pathname.replace(/\/$/, "") || "/";
+        var p = normalizePath(u.pathname);
         if (p === path) {
           link.setAttribute("aria-current", "page");
         }
