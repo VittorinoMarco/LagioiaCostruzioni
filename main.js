@@ -193,10 +193,12 @@
     var path = comparablePath(window.location.pathname);
     document.querySelectorAll("[data-nav-root] .nav-link").forEach(function (link) {
       link.removeAttribute("aria-current");
+      link.classList.remove("is-active");
     });
     document.querySelectorAll("[data-nav-root] .nav-link").forEach(function (link) {
       var href = link.getAttribute("href");
-      if (!href || href.indexOf("#") === 0) return;
+      if (!href) return;
+      if (href.indexOf("#") === 0) return;
       try {
         var u = new URL(href, window.location.href);
         var p = comparablePath(u.pathname);
@@ -206,6 +208,47 @@
       } catch (e) {
         /* ignore */
       }
+    });
+  }
+
+  function initScrollSpy() {
+    var navRoot = document.querySelector("[data-scroll-spy]");
+    if (!navRoot || !window.IntersectionObserver) return;
+    var sections = document.querySelectorAll("[data-section-id]");
+    if (!sections.length) return;
+    var navLinks = navRoot.querySelectorAll("[data-scroll-for]");
+    function highlight(id) {
+      if (!id) return;
+      navLinks.forEach(function (lnk) {
+        lnk.classList.remove("is-active");
+        lnk.removeAttribute("aria-current");
+        if (lnk.getAttribute("data-scroll-for") === id) {
+          lnk.classList.add("is-active");
+          lnk.setAttribute("aria-current", "page");
+        }
+      });
+    }
+    var obs = new IntersectionObserver(
+      function (entries) {
+        var hit = Array.prototype.slice
+          .call(entries)
+          .filter(function (e) {
+            return e.isIntersecting;
+          })
+          .sort(function (a, b) {
+            return (b.intersectionRatio || 0) - (a.intersectionRatio || 0);
+          });
+        if (!hit.length) return;
+        var id = hit[0].target.getAttribute("data-section-id");
+        highlight(id);
+      },
+      { rootMargin: "-10% 0px -52% 0px", threshold: [0, 0.12, 0.28, 0.45] }
+    );
+    sections.forEach(function (sec) {
+      obs.observe(sec);
+    });
+    window.requestAnimationFrame(function () {
+      if (window.scrollY < 120) highlight("home");
     });
   }
 
@@ -510,6 +553,7 @@
     initHeaderScroll();
     initMobileMenu();
     initNavActive();
+    initScrollSpy();
     initSmoothScroll();
     initHeroCounters();
     initScrollIndicator();

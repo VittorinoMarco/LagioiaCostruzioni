@@ -93,7 +93,7 @@
     <a href="#main-content" class="sr-only skip-link">Salta al contenuto</a>
 
     <header class="site-header" role="banner">
-      <div class="nav-inner" data-nav-root>
+      <div class="nav-inner" data-nav-root data-scroll-spy>
         <a href="/LagioiaCostruzioni/" class="logo-link" aria-label="Edil Costruzioni Lagioia — Home">
           <svg class="logo-svg" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
             <defs>
@@ -123,15 +123,15 @@
         </a>
 
         <nav class="nav-desktop" role="navigation" aria-label="Menu principale">
-          <a href="/LagioiaCostruzioni/" class="nav-link" aria-current="page">Home</a>
-          <a href="/LagioiaCostruzioni/chi-siamo.html" class="nav-link">Chi Siamo</a>
-          <a href="/LagioiaCostruzioni/servizi.html" class="nav-link">Servizi</a>
-          <a href="/LagioiaCostruzioni/progetti.html" class="nav-link">Progetti</a>
-          <a href="/LagioiaCostruzioni/contatti.html" class="nav-link">Contatti</a>
+          <a href="#home" class="nav-link" data-scroll-for="home" aria-current="page">Home</a>
+          <a href="#chi-siamo" class="nav-link" data-scroll-for="chi-siamo">Chi Siamo</a>
+          <a href="#servizi" class="nav-link" data-scroll-for="servizi">Servizi</a>
+          <a href="#progetti" class="nav-link" data-scroll-for="progetti">Progetti</a>
+          <a href="#contatti" class="nav-link" data-scroll-for="contatti">Contatti</a>
         </nav>
 
         <div class="nav-actions">
-          <a href="/LagioiaCostruzioni/contatti.html" class="btn btn--primary">Richiedi Preventivo</a>
+          <a href="#contatti" class="btn btn--primary">Richiedi Preventivo</a>
           <button type="button" class="btn btn--icon" data-theme-toggle aria-pressed="false" aria-label="Attiva tema scuro">
             <i data-lucide="moon" width="20" height="20" data-icon-moon aria-hidden="true"></i>
             <i data-lucide="sun" width="20" height="20" data-icon-sun aria-hidden="true"></i>
@@ -166,11 +166,11 @@
         </button>
       </div>
       <nav class="mobile-menu__nav" aria-label="Sezioni">
-        <a href="/LagioiaCostruzioni/">Home</a>
-        <a href="/LagioiaCostruzioni/chi-siamo.html">Chi Siamo</a>
-        <a href="/LagioiaCostruzioni/servizi.html">Servizi</a>
-        <a href="/LagioiaCostruzioni/progetti.html">Progetti</a>
-        <a href="/LagioiaCostruzioni/contatti.html">Contatti</a>
+        <a href="#home">Home</a>
+        <a href="#chi-siamo">Chi Siamo</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#contatti">Contatti</a>
       </nav>
       <div class="mobile-menu__bottom">
         <a href="tel:+393472209465"><i data-lucide="phone" width="20" height="20" aria-hidden="true"></i> +39 347 220 9465</a>
@@ -186,20 +186,27 @@
       </div>
     </div>
 
-    <main id="main-content">
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="hero__grid">
-          <div class="hero__content">
+        <main id="main-content">
+      <section class="hero-editorial" id="home" data-section-id="home" aria-labelledby="hero-title">
+        <div class="hero-editorial__inner">
+          <p class="hero-editorial__side hero-editorial__side--left">Scroll</p>
+          <div class="hero-editorial__center">
             <p class="hero__overline reveal">Dal 1988 in Calabria</p>
             <h1 id="hero-title" class="reveal-up">Costruiamo<br />il tuo futuro</h1>
             <p class="hero__subtitle reveal text-muted">
               Impresa edile di fiducia da oltre 35 anni. Costruzioni, ristrutturazioni e opere civili nelle province di
               Cosenza, Potenza, Matera e Salerno.
             </p>
-            <div class="hero__actions reveal">
-              <a href="/LagioiaCostruzioni/contatti.html" class="btn btn--primary">Richiedi Preventivo</a>
-              <a href="/LagioiaCostruzioni/servizi.html" class="btn btn--outline-light">Scopri i Servizi</a>
-            </div>
+            <figure class="hero-editorial__figure reveal">
+              <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"
+                alt="Cantiere edile con gru e ponteggi"
+                width="800"
+                height="1067"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </figure>
             <div class="hero__stats reveal" data-hero-stats>
               <div class="stat-card">
                 <div class="stat-card__num" data-count="35">0+</div>
@@ -215,16 +222,7 @@
               </div>
             </div>
           </div>
-          <div class="hero__media reveal">
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"
-              alt="Cantiere edile con gru e ponteggi"
-              width="800"
-              height="1000"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </div>
+          <p class="hero-editorial__side hero-editorial__side--right">Praia a Mare · CS · Italia</p>
         </div>
         <div class="hero__scroll" aria-hidden="true">
           <span>Scroll</span>
@@ -232,29 +230,357 @@
         </div>
       </section>
 
-      <section class="intro-strip section" aria-labelledby="intro-title">
-        <div class="container intro-strip__inner">
-          <div class="reveal-up">
-            <span class="section-label">Perché sceglierci</span>
-            <h2 id="intro-title">Solidità, precisione, presenza sul territorio</h2>
-            <p class="text-muted">
-              Dalla Riviera dei Cedri alle province limitrofe, accompagniamo privati e pubbliche amministrazioni in ogni
-              fase del cantiere: dalla progettazione esecutiva alle finiture, con mezzi e professionalità interne.
+      <section class="editorial-intro section" aria-labelledby="intro-lead">
+        <div class="container">
+          <div class="editorial-intro__block">
+            <p id="intro-lead" class="editorial-intro__lead reveal">
+              Siamo Edil Costruzioni Lagioia — dal 1988 costruiamo e ristrutturiamo in Calabria. Dai piccoli interventi alle
+              grandi opere per enti pubblici: un unico interlocutore, dalla progettazione alle finiture.
+            </p>
+            <hr class="editorial-divider" />
+            <div class="editorial-cta-row">
+              <p>
+                Preventivi chiari, tempi rispettati e un team con geometri, progettisti e operai specializzati. Il nostro
+                parco mezzi è in sede: movimento terra e cantieri senza sorprese.
+              </p>
+              <a href="#contatti" class="btn btn--circle">Richiedi<br />preventivo</a>
+            </div>
+            <p style="margin-top: var(--space-10); text-align: center">
+              <a href="#servizi" class="btn btn--ghost">Scopri i servizi</a>
+              <a href="/LagioiaCostruzioni/chi-siamo.html" class="btn btn--ghost" style="margin-left: var(--space-4)">Approfondisci chi siamo</a>
             </p>
           </div>
-          <div class="reveal">
-            <p class="text-muted" style="margin-bottom: var(--space-6)">
-              Scopri la nostra storia, i servizi completi e i progetti realizzati — oppure richiedi subito un preventivo
-              senza impegno.
+        </div>
+      </section>
+
+      <figure class="feature-fullbleed reveal" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=80"
+          alt=""
+          width="1600"
+          height="900"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+
+      <section id="chi-siamo" class="section container" data-section-id="chi-siamo" aria-labelledby="chi-h2">
+        <div class="section-split-head reveal">
+          <div>
+            <span class="section-label">Chi siamo</span>
+            <h2 id="chi-h2" class="reveal-up">Un'impresa di famiglia che costruisce da generazioni</h2>
+          </div>
+          <p class="text-muted reveal">
+            Fondata nel 1988 a Praia a Mare, oggi siamo un punto di riferimento per costruzioni e ristrutturazioni in tutta la
+            provincia di Cosenza — e oltre.
+          </p>
+        </div>
+        <div class="split-section">
+          <div>
+            <h3 class="reveal-up">Radici locali, visione moderna</h3>
+            <p class="reveal text-muted">
+              Fondata nel 1988 a Praia a Mare, nel cuore della Riviera dei Cedri in Calabria, Edil Costruzioni Lagioia
+              Alessandro S.r.l. è oggi uno dei punti di riferimento più solidi nel settore delle costruzioni e
+              ristrutturazioni in tutta la provincia di Cosenza.
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: var(--space-4)">
-              <a href="/LagioiaCostruzioni/chi-siamo.html" class="btn btn--primary">Chi siamo</a>
-              <a href="/LagioiaCostruzioni/progetti.html" class="btn btn--ghost">Vedi i progetti</a>
+            <p class="reveal text-muted">
+              In oltre tre decenni di attività, abbiamo realizzato centinaia di progetti per privati ed enti pubblici: dalle
+              fondamenta fino alle finiture, con la stessa cura e professionalità che ci contraddistingue fin dall'inizio.
+            </p>
+            <p class="reveal text-muted">
+              Il nostro team include geometri certificati, progettisti esperti, operai specializzati e piastrellisti di
+              primo livello. Disponiamo di un parco mezzi proprio per movimento terra e allestimento cantieri.
+            </p>
+          </div>
+          <div>
+            <div class="split-section__media reveal">
+              <img
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=80"
+                alt="Squadra in cantiere con caschetti di sicurezza"
+                width="900"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div
+              class="reveal"
+              style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-4)"
+              aria-label="Numeri chiave"
+            >
+              <div style="padding: var(--space-4); background: var(--color-surface-2); border-radius: var(--radius-md); text-align: center">
+                <p class="display" style="font-size: var(--text-xl); margin: 0; color: var(--color-primary)">35+</p>
+                <p style="margin: var(--space-2) 0 0; font-size: var(--text-xs); color: var(--color-text-muted)">Anni</p>
+              </div>
+              <div style="padding: var(--space-4); background: var(--color-surface-2); border-radius: var(--radius-md); text-align: center">
+                <p class="display" style="font-size: var(--text-xl); margin: 0; color: var(--color-primary)">500+</p>
+                <p style="margin: var(--space-2) 0 0; font-size: var(--text-xs); color: var(--color-text-muted)">Lavori</p>
+              </div>
+              <div style="padding: var(--space-4); background: var(--color-surface-2); border-radius: var(--radius-md); text-align: center">
+                <p class="display" style="font-size: var(--text-xl); margin: 0; color: var(--color-primary)">4</p>
+                <p style="margin: var(--space-2) 0 0; font-size: var(--text-xs); color: var(--color-text-muted)">Province</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="reveal-up" style="margin-top: var(--space-16)">I nostri valori</h3>
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <span class="icon-wrap" aria-hidden="true"><i data-lucide="hammer" width="28" height="28"></i></span>
+            <div>
+              <h4>Qualità artigianale</h4>
+              <p class="text-muted" style="margin: 0">Materiali certificati, lavorazioni a regola d'arte.</p>
+            </div>
+          </article>
+          <article class="value-card reveal">
+            <span class="icon-wrap" aria-hidden="true"><i data-lucide="shield-check" width="28" height="28"></i></span>
+            <div>
+              <h4>Affidabilità</h4>
+              <p class="text-muted" style="margin: 0">Rispettiamo tempi, costi e impegni presi.</p>
+            </div>
+          </article>
+          <article class="value-card reveal">
+            <span class="icon-wrap" aria-hidden="true"><i data-lucide="clipboard-list" width="28" height="28"></i></span>
+            <div>
+              <h4>Trasparenza</h4>
+              <p class="text-muted" style="margin: 0">Preventivi chiari, nessuna sorpresa.</p>
+            </div>
+          </article>
+          <article class="value-card reveal">
+            <span class="icon-wrap" aria-hidden="true"><i data-lucide="award" width="28" height="28"></i></span>
+            <div>
+              <h4>Competenza</h4>
+              <p class="text-muted" style="margin: 0">Oltre 35 anni di esperienza certificata sul campo.</p>
+            </div>
+          </article>
+        </div>
+        <div class="crosslinks">
+          <div class="crosslink-card reveal">
+            <h3>Area operativa</h3>
+            <p>Lavoriamo nelle province di Cosenza, Potenza, Matera e Salerno. Contattaci per un sopralluogo.</p>
+            <a href="#contatti" class="btn btn--ghost">Contatti</a>
+          </div>
+          <div class="crosslink-card reveal">
+            <h3>Pagina dedicata</h3>
+            <p>Approfondisci storia, team e valori nella pagina Chi siamo.</p>
+            <a href="/LagioiaCostruzioni/chi-siamo.html" class="btn btn--primary">Vai a Chi siamo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="servizi" class="section container" data-section-id="servizi" aria-labelledby="servizi-h2">
+        <div class="section-head section-head--center reveal">
+          <span class="section-label">I nostri servizi</span>
+          <h2 id="servizi-h2" class="reveal-up">Tutto quello che ti serve, sotto un solo tetto</h2>
+          <p class="text-muted">
+            Dalla progettazione alla consegna chiavi in mano, gestiamo ogni fase dei tuoi lavori con competenza e dedizione.
+          </p>
+        </div>
+        <div class="bento">
+          <article class="service-card bento__lg reveal">
+            <div class="service-card__icon"><i data-lucide="building-2" width="32" height="32" aria-hidden="true"></i></div>
+            <h3>Nuove costruzioni</h3>
+            <p>Edifici residenziali e commerciali, dalle fondamenta alla consegna chiavi in mano.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon"><i data-lucide="truck" width="28" height="28" aria-hidden="true"></i></div>
+            <h3>Movimento terra</h3>
+            <p>Scavi, preparazione area cantiere, livellamenti con mezzi propri.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon"><i data-lucide="crane" width="28" height="28" aria-hidden="true"></i></div>
+            <h3>Noleggio mezzi</h3>
+            <p>Piattaforme aeree e gru nelle province di CS, PZ, SA.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon"><i data-lucide="road" width="28" height="28" aria-hidden="true"></i></div>
+            <h3>Lavori stradali</h3>
+            <p>Rifacimento manti stradali, reti fognarie, rilievi topografici.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon"><i data-lucide="pickaxe" width="28" height="28" aria-hidden="true"></i></div>
+            <h3>Demolizioni</h3>
+            <p>Demolizioni controllate e sicure.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon"><i data-lucide="thermometer" width="28" height="28" aria-hidden="true"></i></div>
+            <h3>Cappotto termico</h3>
+            <p>Isolamento termico, intonaci, rivestimenti, pittura.</p>
+          </article>
+          <article class="service-card bento__lg reveal">
+            <div class="service-card__icon"><i data-lucide="hammer" width="32" height="32" aria-hidden="true"></i></div>
+            <h3>Ristrutturazioni</h3>
+            <p>Totale o parziale: bagno, cucina, tetto, garage, interni ed esterni.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon"><i data-lucide="file-text" width="28" height="28" aria-hidden="true"></i></div>
+            <h3>Pratiche edilizie</h3>
+            <p>Permessi edilizi, Superbonus, detrazioni fiscali.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon"><i data-lucide="zap" width="28" height="28" aria-hidden="true"></i></div>
+            <h3>Impianti</h3>
+            <p>Impianti elettrici e fognari.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon"><i data-lucide="map" width="28" height="28" aria-hidden="true"></i></div>
+            <h3>Urbanizzazione</h3>
+            <p>Opere di urbanizzazione primaria e secondaria.</p>
+          </article>
+        </div>
+        <div class="cta-banner reveal">
+          <p class="display" style="margin: 0; font-size: var(--text-xl)">Hai un progetto in mente? Parliamone.</p>
+          <a href="#contatti" class="btn">Richiedi preventivo gratuito</a>
+        </div>
+        <p style="text-align: center; margin-top: var(--space-10)">
+          <a href="/LagioiaCostruzioni/servizi.html" class="btn btn--ghost">Vedi i servizi dettagliati</a>
+        </p>
+      </section>
+
+      <section id="progetti" class="section container" data-section-id="progetti" data-project-filters aria-labelledby="progetti-h2">
+        <div class="section-head section-head--center reveal">
+          <span class="section-label">I nostri lavori</span>
+          <h2 id="progetti-h2" class="reveal-up">Ogni progetto racconta una storia</h2>
+          <p class="text-muted">
+            Da piccoli interventi di ristrutturazione a grandi opere civili per enti pubblici. Ecco alcuni dei lavori che ci rendono orgogliosi.
+          </p>
+        </div>
+        <div class="filter-tabs reveal" role="tablist" aria-label="Categoria progetto">
+          <button type="button" class="filter-tab is-active" data-filter-tab data-filter="all" role="tab" aria-selected="true">Tutti</button>
+          <button type="button" class="filter-tab" data-filter-tab data-filter="costruzioni" role="tab" aria-selected="false">Costruzioni</button>
+          <button type="button" class="filter-tab" data-filter-tab data-filter="ristrutturazioni" role="tab" aria-selected="false">Ristrutturazioni</button>
+          <button type="button" class="filter-tab" data-filter-tab data-filter="opere-pubbliche" role="tab" aria-selected="false">Opere pubbliche</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal" data-project-card data-category="costruzioni">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Esterno residenza moderna con giardino" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Residenza privata</h3>
+              <div class="project-card__meta"><span>Praia a Mare (CS)</span><i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i></div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-category="ristrutturazioni">
+            <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800&q=80" alt="Esterno villa con piscina dopo ristrutturazione" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Ristrutturazione villa</h3>
+              <div class="project-card__meta"><span>Scalea (CS)</span><i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i></div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-category="costruzioni">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Edificio per uffici in vetro e acciaio" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Edificio commerciale</h3>
+              <div class="project-card__meta"><span>Cosenza</span><i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i></div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-category="opere-pubbliche">
+            <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&q=80" alt="Area parcheggio urbano con segnaletica orizzontale" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Parcheggio pubblico</h3>
+              <div class="project-card__meta"><span>Tortora (CS)</span><i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i></div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-category="ristrutturazioni">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Cucina moderna con isola dopo ristrutturazione" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Ristrutturazione appartamento</h3>
+              <div class="project-card__meta"><span>Diamante (CS)</span><i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i></div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-project-card data-category="opere-pubbliche">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Strada asfaltata in zona collinare" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Rifacimento strada comunale</h3>
+              <div class="project-card__meta"><span>Papasidero (CS)</span><i data-lucide="arrow-up-right" width="22" height="22" aria-hidden="true"></i></div>
+            </div>
+          </article>
+        </div>
+        <p style="text-align: center; margin-top: var(--space-10)">
+          <a href="/LagioiaCostruzioni/progetti.html" class="btn btn--primary">Portfolio completo</a>
+        </p>
+      </section>
+
+      <section id="contatti" class="section container" data-section-id="contatti" aria-labelledby="cont-h2">
+        <div class="section-split-head reveal">
+          <div>
+            <span class="section-label">Contatti</span>
+            <h2 id="cont-h2" class="reveal-up">Parliamo del tuo progetto</h2>
+          </div>
+          <p class="text-muted reveal">
+            Hai un progetto in mente o vuoi sapere di più sui nostri servizi? Contattaci: rispondiamo entro 24 ore.
+          </p>
+        </div>
+        <div class="contact-strip reveal">
+          <p>
+            <strong>Risposta rapida</strong> — Telefono e WhatsApp per urgenze; email per documentazione e preventivi
+            dettagliati.
+          </p>
+        </div>
+        <div class="contact-grid" style="margin-top: var(--space-8)">
+          <div>
+            <ul class="contact-list reveal" role="list">
+              <li>
+                <span class="icon-wrap" aria-hidden="true"><i data-lucide="map-pin" width="22" height="22"></i></span>
+                <span>Via della Canaletta, 22C – 87028 Praia a Mare (CS), Calabria</span>
+              </li>
+              <li>
+                <span class="icon-wrap" aria-hidden="true"><i data-lucide="phone" width="22" height="22"></i></span>
+                <a href="tel:+393472209465">+39 347 220 9465</a>
+              </li>
+              <li>
+                <span class="icon-wrap" aria-hidden="true"><i data-lucide="mail" width="22" height="22"></i></span>
+                <a href="mailto:edilcostruzioni.srl1@tiscali.it">edilcostruzioni.srl1@tiscali.it</a>
+              </li>
+              <li>
+                <span class="icon-wrap" aria-hidden="true"><i data-lucide="clock" width="22" height="22"></i></span>
+                <span>Lun–Ven: 8:00–18:00 | Sab: 8:00–13:00</span>
+              </li>
+            </ul>
+            <a
+              class="btn btn--primary"
+              href="https://wa.me/393472209465?text=Buongiorno%2C%20vi%20contatto%20dal%20sito%20web.%20Vorrei%20richiedere%20un%20preventivo%20per%20i%20seguenti%20lavori%3A%20"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="background: #25d366; border: none; min-height: 48px"
+            >
+              <i data-lucide="message-circle" width="22" height="22" aria-hidden="true"></i>
+              Scrivici su WhatsApp
+            </a>
+            <div class="map-wrap reveal" style="margin-top: var(--space-8)">
+              <iframe
+                title="Mappa — Edil Costruzioni Lagioia, Praia a Mare"
+                src="https://maps.google.com/maps?q=Via+della+Canaletta+22C+Praia+a+Mare+CS&output=embed"
+                width="600"
+                height="280"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <div class="reveal">
+            <h3 class="reveal-up">Modulo di contatto</h3>
+            <p class="text-muted" style="margin-bottom: var(--space-6)">
+              Compila il modulo per richiedere un preventivo o informazioni. Trovi tutti i campi e la privacy policy nella
+              pagina dedicata.
+            </p>
+            <a href="/LagioiaCostruzioni/contatti.html" class="btn btn--primary">Richiedi preventivo — modulo completo</a>
+            <div class="crosslinks" style="margin-top: var(--space-10)">
+              <div class="crosslink-card">
+                <h3>Servizi</h3>
+                <p>Scopri tutte le lavorazioni che possiamo eseguire per te.</p>
+                <a href="/LagioiaCostruzioni/servizi.html" class="btn btn--ghost">Vai ai servizi</a>
+              </div>
+              <div class="crosslink-card">
+                <h3>Progetti</h3>
+                <p>Guarda il portfolio completo con filtri per categoria.</p>
+                <a href="/LagioiaCostruzioni/progetti.html" class="btn btn--ghost">Vai ai progetti</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
 
     <footer class="site-footer" role="contentinfo">
       <div class="container">
