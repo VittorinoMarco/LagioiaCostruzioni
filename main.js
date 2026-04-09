@@ -4,7 +4,6 @@
 (function () {
   "use strict";
 
-  var THEME_KEY = "ecl-theme";
   var COOKIE_KEY = "ecl-cookie-consent";
 
   function safe(fn) {
@@ -21,80 +20,6 @@
         lucide.createIcons();
       }
     });
-  }
-
-  function getStoredTheme() {
-    try {
-      return localStorage.getItem(THEME_KEY);
-    } catch (e) {
-      return null;
-    }
-  }
-
-  function setStoredTheme(value) {
-    try {
-      localStorage.setItem(THEME_KEY, value);
-    } catch (e) {
-      /* ignore */
-    }
-  }
-
-  function applyTheme(theme) {
-    var root = document.documentElement;
-    if (theme === "light" || theme === "dark") {
-      root.setAttribute("data-theme", theme);
-    } else {
-      root.removeAttribute("data-theme");
-    }
-    var toggle = document.querySelector("[data-theme-toggle]");
-    if (toggle) {
-      var isDark =
-        theme === "dark" ||
-        (!theme && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
-      toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-      toggle.setAttribute(
-        "aria-label",
-        isDark ? "Attiva tema chiaro" : "Attiva tema scuro"
-      );
-    }
-  }
-
-  function resolveTheme() {
-    var stored = getStoredTheme();
-    if (stored === "light" || stored === "dark") {
-      return stored;
-    }
-    return null;
-  }
-
-  function initTheme() {
-    applyTheme(resolveTheme());
-    var toggle = document.querySelector("[data-theme-toggle]");
-    if (!toggle) return;
-    toggle.addEventListener("click", function () {
-      var root = document.documentElement;
-      var current = root.getAttribute("data-theme");
-      var prefersDark =
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
-      var isDark =
-        current === "dark" ||
-        (!current && prefersDark);
-      var next = isDark ? "light" : "dark";
-      setStoredTheme(next);
-      applyTheme(next);
-      initLucide();
-    });
-    if (window.matchMedia) {
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", function () {
-          if (!getStoredTheme()) {
-            applyTheme(null);
-            initLucide();
-          }
-        });
-    }
   }
 
   function initHeaderScroll() {
@@ -549,7 +474,6 @@
 
   function boot() {
     initLucide();
-    initTheme();
     initHeaderScroll();
     initMobileMenu();
     initNavActive();
